@@ -8,7 +8,6 @@ ENV REACT_APP_API_URL=${REACT_APP_API_URL}
 COPY . /usr/src/app
 RUN npm install
 RUN npm run build
-RUN npm run robot
 RUN npm run start
 
 # production environment

@@ -2,7 +2,8 @@
   "extends": "next/core-web-vitals",
   "plugins": [
     "react",
-    "prettier"
+    "prettier",
+    "unused-imports"
   ],
   "rules": {
     "no-console": "error",
@@ -14,6 +15,7 @@
     "react/jsx-curly-newline": 1,
     "react/jsx-props-no-spreading": 1,
     "prettier/prettier": "error",
+    "unused-imports/no-unused-imports": "error",
     "no-var": "error"
   }
 }

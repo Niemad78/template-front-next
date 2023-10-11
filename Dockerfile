@@ -9,6 +9,7 @@ COPY . /usr/src/app
 RUN npm install
 RUN npm run build
 RUN npm run robot
+RUN npm run start
 
 # production environment
 FROM nginx:1.13.9-alpine

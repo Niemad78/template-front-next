@@ -16,4 +16,4 @@ RUN mkdir -p /etc/nginx/conf.d
 COPY ./default.conf /etc/nginx/conf.d/
 COPY --from=builder /usr/src/next-nginx/out /usr/share/nginx/html
 EXPOSE 80
-CMD ["nginx", "-g", "daemon off", "&", "npm", "start;"]
+CMD ["nginx", "-g", "daemon off;"]

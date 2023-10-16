@@ -1,19 +1,36 @@
-# build environment
-FROM node:18 as builder
-RUN mkdir /usr/src/app
-WORKDIR /usr/src/app
-ENV PATH /usr/src/app/node_modules/.bin:$PATH
-ARG NEXT_PUBLIC_API_URL=${NEXT_PUBLIC_API_URL}
-ENV NEXT_PUBLIC_API_URL=${NEXT_PUBLIC_API_URL}
-COPY . /usr/src/app
-RUN npm install
+FROM node:18-alpine AS deps
+RUN apk add --no-cache libc6-compat
+WORKDIR /app
+
+COPY package.json package-lock.json ./
+RUN  npm install --production
+
+FROM node:18-alpine AS builder
+WORKDIR /app
+COPY --from=deps /app/node_modules ./node_modules
+COPY . .
+
+ENV NEXT_TELEMETRY_DISABLED 1
+
 RUN npm run build
 
-# production environment
-FROM nginx:1.13.9-alpine
-RUN rm -rf /etc/nginx/conf.d
-RUN mkdir -p /etc/nginx/conf.d
-COPY ./default.conf /etc/nginx/conf.d/
-COPY --from=builder /usr/src/app/.next /usr/share/nginx/html
+FROM node:18-alpine AS runner
+WORKDIR /app
+
+ENV NODE_ENV production
+ENV NEXT_TELEMETRY_DISABLED 1
+
+RUN addgroup --system --gid 1001 nodejs
+RUN adduser --system --uid 1001 nextjs
+
+COPY --from=builder --chown=nextjs:nodejs /app/.next ./.next
+COPY --from=builder /app/node_modules ./node_modules
+COPY --from=builder /app/package.json ./package.json
+
+USER nextjs
+
 EXPOSE 80
-CMD ["npm", "start", "&", "nginx", "-g", "daemon off;"]
+
+ENV PORT 80
+
+CMD ["npm", "start"]

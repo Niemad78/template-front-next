@@ -1,11 +1,12 @@
 import Image from "next/image";
+import logo from "../public/logoDwM.png";
 
 export default function Home() {
   return (
     <section className="w-[100vw] h-[100vh] bg-primary">
       <div className="flex flex-col justify-center items-center h-[100%]">
         <Image
-          src="/logoDwM.png"
+          src={logo}
           alt="Damien Mauger Développement Web"
           className="z-10 bg-transparent"
           width={350}

@@ -5,79 +5,79 @@
 
 version: 2
 updates:
-  - package-ecosystem: "axios" # See documentation for possible values
-    directory: "/" # Location of package manifests
+  - package-ecosystem: "axios"
+    directory: "/"
     schedule:
       interval: "weekly"
-  - package-ecosystem: "classnames" # See documentation for possible values
-    directory: "/" # Location of package manifests
+  - package-ecosystem: "classnames"
+    directory: "/"
     schedule:
       interval: "weekly"
-  - package-ecosystem: "husky" # See documentation for possible values
-    directory: "/" # Location of package manifests
+  - package-ecosystem: "husky"
+    directory: "/"
     schedule:
       interval: "weekly"
-  - package-ecosystem: "next" # See documentation for possible values
-    directory: "/" # Location of package manifests
+  - package-ecosystem: "next"
+    directory: "/"
     schedule:
       interval: "weekly"
-  - package-ecosystem: "prettier" # See documentation for possible values
-    directory: "/" # Location of package manifests
+  - package-ecosystem: "prettier"
+    directory: "/"
     schedule:
       interval: "weekly"
-  - package-ecosystem: "react" # See documentation for possible values
-    directory: "/" # Location of package manifests
+  - package-ecosystem: "react"
+    directory: "/"
     schedule:
       interval: "weekly"
-  - package-ecosystem: "react-dom" # See documentation for possible values
-    directory: "/" # Location of package manifests
+  - package-ecosystem: "react-dom"
+    directory: "/"
     schedule:
       interval: "weekly"
-  - package-ecosystem: "@type/node" # See documentation for possible values
-    directory: "/" # Location of package manifests
+  - package-ecosystem: "@type/node"
+    directory: "/"
     schedule:
       interval: "weekly"
-    - package-ecosystem: "@type/react" # See documentation for possible values
-    directory: "/" # Location of package manifests
+  - package-ecosystem: "@type/react"
+    directory: "/"
     schedule:
       interval: "weekly"
-  - package-ecosystem: "@type/react-dom" # See documentation for possible values
-    directory: "/" # Location of package manifests
+  - package-ecosystem: "@type/react-dom"
+    directory: "/"
     schedule:
       interval: "weekly"
-  - package-ecosystem: "autoprefixer" # See documentation for possible values
-    directory: "/" # Location of package manifests
+  - package-ecosystem: "autoprefixer"
+    directory: "/"
     schedule:
       interval: "weekly"
-  - package-ecosystem: "eslint" # See documentation for possible values
-    directory: "/" # Location of package manifests
+  - package-ecosystem: "eslint"
+    directory: "/"
     schedule:
       interval: "weekly"
-  - package-ecosystem: "prettier" # See documentation for possible values
-    directory: "/" # Location of package manifests
+  - package-ecosystem: "prettier"
+    directory: "/"
     schedule:
       interval: "weekly"
-  - package-ecosystem: "eslint-config-next" # See documentation for possible values
-    directory: "/" # Location of package manifests
+  - package-ecosystem: "eslint-config-next"
+    directory: "/"
     schedule:
       interval: "weekly"
-  - package-ecosystem: "eslint-plugin-prettier" # See documentation for possible values
-    directory: "/" # Location of package manifests
+  - package-ecosystem: "eslint-plugin-prettier"
+    directory: "/"
     schedule:
       interval: "weekly"
-  - package-ecosystem: "eslint-plugin-unused-imports" # See documentation for possible values
-    directory: "/" # Location of package manifests
+  - package-ecosystem: "eslint-plugin-unused-imports"
+    directory: "/"
     schedule:
       interval: "weekly"
-  - package-ecosystem: "postcss" # See documentation for possible values
-    directory: "/" # Location of package manifests
+  - package-ecosystem: "postcss"
+    directory: "/"
     schedule:
       interval: "weekly"
-  - package-ecosystem: "tailwindcss" # See documentation for possible values
-    directory: "/" # Location of package manifests
+  - package-ecosystem: "tailwindcss"
+    directory: "/"
     schedule:
       interval: "weekly"
-  - package-ecosystem: "typescript" # See documentation for possible values
-    directory: "/" # Location of package manifests
+  - package-ecosystem: "typescript"
+    directory: "/"
     schedule:
       interval: "weekly"
